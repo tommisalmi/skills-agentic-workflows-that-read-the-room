@@ -5,6 +5,8 @@ on:
   workflow_dispatch: {}
   schedule:
     - cron: '17 9 * * *'
+vars:
+  GH_AW_DEFAULT_MODEL_COPILOT: "copilot/agent"
 safe-outputs:
   create-pull-request:
     title-prefix: "[mona] "
