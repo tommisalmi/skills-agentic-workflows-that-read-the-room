@@ -1,13 +1,14 @@
 ---
 name: update-github-info
 description: Draft website updates for Mona's GitHub Info site from official GitHub sources.
+engine: copilot
 on:
   workflow_dispatch: {}
   schedule:
     - cron: '17 9 * * *'
-vars:
-  GH_AW_DEFAULT_MODEL_COPILOT: "copilot/agent"
 safe-outputs:
+  assign-to-agent:
+    model: github-copilot-default
   create-pull-request:
     title-prefix: "[mona] "
     draft: true
@@ -19,7 +20,6 @@ network:
   allowed:
     - github.com
     - github.blog
-    - awesome-copilot.github.com
 ---
 
 # Update Mona's GitHub Info website
