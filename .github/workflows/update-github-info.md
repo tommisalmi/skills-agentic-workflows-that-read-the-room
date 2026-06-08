@@ -8,7 +8,7 @@ on:
     - cron: '17 9 * * *'
 safe-outputs:
   assign-to-agent:
-    model: github-copilot-default
+    model: auto
   create-pull-request:
     title-prefix: "[mona] "
     draft: true
